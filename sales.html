@@ -6,17 +6,35 @@
   <link href="style.css" type='text/css' rel='stylesheet'/>
  </head>
  <body>
-  <h3>Pike Place</h3>
-  <ul id="pike"></ul>
-  <h3>Seatac</h3>
-  <ul id="seatac"></ul>
-  <h3>South Center</h3>
-    <ul id="southCenter"></ul>
-  <h3>Bellevue Square</h3>
-    <ul id="bSquare"></ul>
-  <h3>Alki Beach</h3>
-    <ul id="alki"></ul>    
 
+  <div>
+    <h3>Pike Place</h3>
+      <ul id="pike"></ul>
+    <h3>Seatac</h3>
+      <ul id="seatac"></ul>
+    <h3>South Center</h3>
+      <ul id="southCenter"></ul>
+    <h3>Bellevue Square</h3>
+      <ul id="bSquare"></ul>
+    <h3>Alki Beach</h3>
+      <ul id="alki"></ul>  
+  </div>
+
+  <fieldset>
+    <legend>New Location:</legend>
+    <form>
+      <label for="location">Location:</label><br />
+      <input name="location" type="text"><br />
+      <label for="minCustHour">Minimum customers per hour:</label><br />
+      <input name="minCustHour" type="text"><br />
+      <label for="maxCustHour">Maximum customers per hour:</label><br />
+      <input name="maxCustHour" type="text"><br />
+      <label for="avgCookiesCust">Average cookies per customer:</label><br />
+      <input name="avgCookiesCust" type="text"><br />
+      <button type="buttom">Submit</button>
+    </form>
+  </fieldset>
+  
  <script src="app.js"></script>
  </body>
 </html.
