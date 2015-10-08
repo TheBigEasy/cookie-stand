@@ -1,9 +1,14 @@
 body {
-	background-color: #f3ffe2;
+	background-color: #DBFFFF;
 }
 #hlight {
 	font-family: 'Roboto+Slab', serif;
 	color: #225378;
+	font-size: 4.5em;
+	text-align: center;
+	text-shadow: 2px 3px 3px #111111;
+
+
 }
 #dtext {
 	font-family: Arial, sans-serif;
@@ -18,5 +23,72 @@ body {
 	height: 200px;
 	border: 3px solid black;
 	background-color: #acf0f2;
+}
+#store {
+	background-color: #f3ffe2;
+
+
+}
+#fish1 {
+	display: block;
+	margin: 0 auto;
+	width: 700px;    
+}
+#slogan {
+	font-size: 25px;
+	text-align: center;
+}
+#storeHours{
+     float:left;
+     margin-left: 200px;
+     margin-top: 100px;
+}
+#grpFish# {
+     float:right;
+}
+
+#ipsum {
+	display: inline-block;
+	float: left;
+    background-color: #E9F5D3;
+    padding: 20px;
+}
+#words {
+	float:left;
+
+}
+#famPic {
+	float:right;
+	margin-right: 50px;
+	margin-top: 40px;
+}
+#shops {
+	text-align: center;
+	list-style: none;
+}
+#hist {
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 0px;
+}
+#fishFam {
+	display: block;
+	margin: 0 auto;
+	width: 400px;
+}
+#family {
+  display: block;
+	margin: 0 auto;
+	width: 400px;	
+}
+#sales {
+	font-size: 25px;
+}
+#merch {
+	color: #BF6700;
+	font-family: "Arial";
+}
+#shirt {
+    margin-left: 450px;	
 }
 
