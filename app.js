@@ -32,12 +32,11 @@ var CookieStand = function(place,minCustHour,maxCustHour,avgCookiesCust,id) {
 
  this.makeUL = function(id) {
 
-    for(var i = 0; i < this.openHours.length; i++) {
-
         // connect the list to the JS; this is where your list will appear
-        var storeList = document.getElementById(this.id);
-        
-        // Create the list item:
+    var storeList = document.getElementById(this.id);
+
+    for(var i = 0; i < this.openHours.length; i++) {
+         // Create the list item:
         var item = document.createElement('li');
 
         // Set its contents:
@@ -46,6 +45,11 @@ var CookieStand = function(place,minCustHour,maxCustHour,avgCookiesCust,id) {
         // Add it to the list:
         storeList.appendChild(item);
        }
+       var li = document.createElement('li');
+       li.textContent = 'total ' + this.totalDailyCookies();
+       storeList.appendChild(li);
+
+       
 
   };
         this.makeUL(this.id);	
