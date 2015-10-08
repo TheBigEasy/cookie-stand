@@ -51,7 +51,7 @@ var CookieStand = function(place,minCustHour,maxCustHour,avgCookiesCust,id) {
         this.makeUL(this.id);	
  
 } 
-
+//create instances of object here
 var pikePlace = new CookieStand('pike place market', 17,88,5.2, 'pike');
 var seatac = new CookieStand('seatac',6, 44, 1.2, 'seatac');
 var southCenter = new CookieStand('southCenter',11, 38, 1.9, 'southCenter');
