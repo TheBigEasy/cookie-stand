@@ -45,7 +45,7 @@ var CookieStand = function(place,minCustHour,maxCustHour,avgCookiesCust,id) {
 
         // Add it to the list:
         storeList.appendChild(item);
-        }
+       }
 
   };
         this.makeUL(this.id);	
