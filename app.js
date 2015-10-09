@@ -32,78 +32,50 @@ var CookieStand = function(place,minCustHour,maxCustHour,avgCookiesCust,id) {
 
   this.totalDailyCookies();
   
-    // var table = document.getElementById('table');
-    // var placeName = [pikePlace, seatac, southCenter, bellevueSquare, alkiBeach];
-   
-    var tab = document.getElementById('table');
-    // var placeName = ['Pike Place', 'Seatac', 'South Center', 'Bellevue Square', 'Alki Beach'];
-
+    
     this.makeTable = function() {
-      // console.log('hello from inside makeTable');
-        
-        var tr = document.createElement('tr');
-        tr.textContent = this.place;
-        tab.appendChild(tr);
+     var tab = document.getElementById('table');
+      
+     var tr = document.createElement('tr');
+     tr.textContent = this.place;
+     tab.appendChild(tr);
 
-        for (var j = 0; j < this.cookiesPerHour.length; j++) {
+     for (var j = 0; j < this.cookiesPerHour.length; j++) {
           
-          var td = document.createElement('td');
-          td.textContent = this.cookiesPerHour[j];
+     var td = document.createElement('td');
+     td.textContent = this.cookiesPerHour[j];
           tr.appendChild(td);
-        }
-        var td2 = document.createElement('td');
-        td2.textContent = this.dailyTotals;
-        tr.appendChild(td2);
+     }
+     var td2 = document.createElement('td');
+     td2.textContent = this.dailyTotals;
+     tr.appendChild(td2);
       
     };
     this.makeTable();
 
-
-    // var cookiesperHour = [];
-
- //    this.makeTable = function(placeName,cookiesperHour) {
- //      console.log('hello from inside makeTable')
- //      for (var i = 0; i < this.placeName.length; i++) {
- //        var tr = document.createElement('tr');
- //        tr.textContent = this.placeName[i];
- //        table.appendChild(tr);
-
- //        for (var j = 0; j < this.cookiesperHour.length; j++) {
- //          var td = document.createElement('td');
- //          td.textContent = this.cookiesperHour[j];
- //          tr.appendChild(td);
- //        }
- //        var td2 = document.createElement('td');
- //        td2.textContent = "beans";
- //        tr.appendChild(td2);
- //      }
-      
- //    };
- //    this.makeTable(placeName,cookiesPerHour);
- // // this.makeUL = function(id) {
-
- //        // connect the list to the JS; this is where your list will appear
-    // var storeList = document.getElementById(this.id);
-
-    // for(var i = 0; i < this.openHours.length; i++) {
-    //      // Create the list item:
-    //     var item = document.createElement('li');
-
-    //     // Set its contents:
-    //     item.appendChild(document.createTextNode(this.openHours[i] + ': ' + this.avgCookiesHour() ));
-
-    //     // Add it to the list:
-    //     storeList.appendChild(item);
-    //    }
-    //    var li = document.createElement('li');
-    //    li.textContent = 'total ' + this.totalDailyCookies();
-    //    storeList.appendChild(li);
-
+    
 };
 
-        // this.makeUL(this.id);	
+    //start form connection here
+    var getStore = function(e) {
+      e.preventDefault();
+      var location = document.getElementById('location');
+      var minCustHour = document.getElementById('minCustHour');
+      var maxCustHour = document.getElementById('maxCustHour');
+      var avgCookiesCust = document.getElementById('avgCookiesCust');
+    
+
+    var newStore = new CookieStand(location.value, minCustHour.value, maxCustHour.value, avgCookiesCust.value);
+
+    //empty store values
+    location.value = '';
+    minCustHour.value = '';
+    maxCustHour.value = '';
+    avgCookiesCust.value = '';
+    }
+    var addButton = document.getElementById('button');
+    addButton.addEventListener('click', getStore);
  
-// } 
 //create instances of object here
 var pikePlace = new CookieStand('pike place market', 17,88,5.2, 'pike');
 var seatac = new CookieStand('seatac',6, 44, 1.2, 'seatac');
